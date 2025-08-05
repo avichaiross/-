@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>המדריך - מפה אינטראקטיבית</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Assistant', sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffcc70;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background: #1e1e1e;
+      color: white;
+      border: 2px solid transparent;
+      padding: 10px 15px;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background: #ffcc70;
+      color: black;
+      border-color: #ffcc70;
+    }
+
+    iframe {
+      width: 90%;
+      height: 80vh;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>המדריך של אביחי</header>
+  
+  <div class="buttons">
+    <button onclick="changeLayer('בתי קפה')">☕ בתי קפה</button>
+    <button onclick="changeLayer('אוכל רחוב')">🌯 אוכל רחוב</button>
+    <button onclick="changeLayer('ברים')">🍸 ברים</button>
+    <button onclick="changeLayer('מסעדות עד 100ש"ח')">💰 מסעדות עד 100₪</button>
+    <button onclick="changeLayer('פארקים')">🌳 פארקים</button>
+    <button onclick="changeLayer('מקומות רומנטיים')">❤️ מקומות רומנטיים</button>
+    <button onclick="changeLayer('לבדוק')">🔍 לבדוק</button>
+  </div>
+  
+  <iframe id="map" src="https://www.google.com/maps/d/u/1/embed?mid=1oPLW70ARfaxMcmSgKObFrJzVwqrtPmk&ehbc=2E312F"></iframe>
+
+  <script>
+    function changeLayer(layerName) {
+      // כאן ניתן להרחיב בהמשך לשליטה מתקדמת בשכבות דרך API
+      alert(`כפתור '${layerName}' נלחץ - בגירסה הבאה נוסיף שליטה אמיתית בשכבות.`);
+    }
+  </script>
+</body>
+</html>
